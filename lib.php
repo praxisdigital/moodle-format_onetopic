@@ -164,7 +164,7 @@ class format_onetopic extends core_courseformat\base {
                 $course->realcoursedisplay = property_exists($course, 'coursedisplay') ? $course->coursedisplay : false;
 
                 if ($sectionid <= 0) {
-                    $section = optional_param('section', -1, PARAM_INT);
+                    $section = optional_param('section', 0, PARAM_INT);
                 }
 
                 $numsections = (int)$DB->get_field('course_sections', 'MAX(section)', ['course' => $courseid], MUST_EXIST);

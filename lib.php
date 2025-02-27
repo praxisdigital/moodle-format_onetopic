@@ -174,7 +174,7 @@ class format_onetopic extends core_courseformat\base {
         if (!isset($section) && ($PAGE->pagetype == 'course-view-onetopic' || $PAGE->pagetype == 'course-view')) {
 
             if ($sectionid <= 0) {
-                $section = optional_param('section', -1, PARAM_INT);
+                $section = optional_param('section', 0, PARAM_INT);
             }
 
             if ($section < 0) {
